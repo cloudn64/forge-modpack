@@ -1,0 +1,76 @@
+
+[stressValues]
+
+	#.
+	#Stress impacts of VStuff's blocks
+	[stressValues.v1]
+
+		#.
+		#.
+		#[in Stress Units]
+		#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
+		[stressValues.v1.impact]
+			reaction_wheel = 4.0
+			mechanical_thruster = 8.0
+			phys_pulley = 4.0
+
+		#.
+		#Values for ropes
+		[stressValues.v1.ropes]
+			#.
+			#[in Blocks]
+			#The maximum length of a rope
+			#Range: 8.0 ~ 256.0
+			ropeMaxLength = 32.0
+			#.
+			#Whether ropes make sounds when created
+			ropeSounds = true
+
+		#.
+		#Values for the Mechanical Thruster
+		[stressValues.v1.thruster]
+			#.
+			#The multiplier for the amount of thrust produced
+			#Range: 0.0 ~ 3.4028234663852886E38
+			thrusterMultiplier = 1.0
+			#.
+			#[in Blocks per second]
+			#The maximum speed of the thruster
+			#Range: > 0
+			thrusterMaxSpeed = 10
+			#.
+			#[in Blocks]
+			#The maximum distance the air current from the thruster can push or pull.
+			#Range: 0.0 ~ 256.0
+			thrusterMaxPushDistance = 32.0
+
+		#.
+		#Values for the Phys Grabber
+		[stressValues.v1.physGrabber]
+			#.
+			#The maximum weight the Phys Grabber can grab. Set to 0 to make the grabber ignore mass.
+			#Range: 0.0 ~ 3.4028234663852886E38
+			physGrabberMaxMass = 500000.0
+
+		#.
+		#Values for the Reaction Wheel
+		[stressValues.v1.reactionWheel]
+			#.
+			#[in RPM]
+			#Maximum RPM the Reaction Wheel scales torque against
+			#Range: 1.0 ~ 256.0
+			reactionWheelMaxSpeed = 256.0
+			#.
+			#Maximum torque applied by Reaction Wheel at max RPM
+			#Range: 0.0 ~ 100000.0
+			reactionWheelMaxTorque = 50000.0
+
+		#.
+		[stressValues.v1.levituff]
+			#.
+			#Range: 0.0 ~ 64.0
+			levituffStrengthMultiplier = 3.0
+			#.
+			#Range: 0.0 ~ 1.0
+			levituffForceDamping = 0.15000000596046448
+

@@ -1,0 +1,588 @@
+
+[straight_shot]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#The amount of seconds the projectile will have no gravity for - this is to prevent tridents from never returning e.g.
+	#Range: 0 ~ 60
+	gravity_seconds = 10
+
+[hydro_shock]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 5
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+
+[faster_attacks]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Multiplier to the enchantment level which will determine the attack speed bonus (level * <multiplier>) (result will apply as multiply_base)
+	#Range: 0.0 ~ 10.0
+	faster_attacks_multiplier = 0.15
+
+[shatter]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Base chance for the projectile to shatter and deal area of effect damage (1 means 100%)
+	#Range: 0.0 ~ 1.0
+	shatter_chance_base = 0.3
+	#Multiplier to the enchantment level to determine the bonus to the base chance (level * <chance_multiplier>)
+	#Range: 0.0 ~ 1.0
+	shatter_chance_modifier = 0.1
+	#Multiplier to the enchantment level to determine the area of effect damage (level * <damage_multiplier>)
+	#Range: 0.0 ~ 10.0
+	shatter_damage_multiplier = 0.5
+
+[plague]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 6
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Chance for the effect to apply (level * <chance_multiplier>) (result of 1 means 100%)
+	#Range: 0.0 ~ 1.0
+	plague_chance_multiplier = 0.1
+	#Base duration (in seconds) for the applied effect
+	#Range: 0.0 ~ 60.0
+	plague_duration_base = 3.0
+	#How much the enchantment level affects the duration (1 * <multiplier>) (result will be in seconds)
+	#Range: 0.0 ~ 10.0
+	plague_duration_multiplier = 2.0
+	#Base damage for the plague effect (the effect level (amplifier) gets added to this damage)
+	#Range: 0.0 ~ 100.0
+	plague_damage_base = 1.0
+	#Multiplier to the (<base_damage> + amplifier) result
+	#Range: 0.0 ~ 10.0
+	plague_damage_multiplier = 0.5
+	#Determines how often the plague effect ticks (i.e. deals damage) - when (duration % (Math.max(1, 20 - amplifier / <damage_tick_rate>))) is equal to 0 the effect tick will happen
+	#Range: 1 ~ 15
+	plague_damage_tick_rate = 3
+
+[perception]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Enable / Disable outlines on invisible entities
+	perception_show_invisible = true
+
+[treasure_finder]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#How often the particles will spawn (in ticks)
+	#Range: 1 ~ 1000
+	particle_rate = 10
+
+	#See default entries for reference
+	#'resource' can be a block or block tag ('$treasure' relates to containers that have yet to generate their loot)
+	#'from_level' and 'to_level' describe the bounds for which enchantment level the effect will be shown ('-1' means no limit)
+	#'color' can be a known text color from Minecraft or one in the '#123456' format
+	[[treasure_finder.entries]]
+		resource = "$treasure"
+		from_level = 1
+		to_level = -1
+		range = 24.0
+		color_shift_rate = 2.0
+		display_type = "PARTICLES"
+
+		[[treasure_finder.entries.colors]]
+			color = "#a87c1a"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "gold"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#ff9f1a"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#ff5fd2"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#5fd9ff"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#ffffff"
+			alpha = 1.0
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/copper"
+		from_level = 1
+		to_level = 1
+		range = 24.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "#7a4a2e"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "dark_green"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#3f7f5f"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/iron"
+		from_level = 1
+		to_level = 2
+		range = 24.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "white"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "gray"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "dark_gray"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/redstone"
+		from_level = 1
+		to_level = 2
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "dark_red"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "red"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#ff4d4d"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/zinc"
+		from_level = 1
+		to_level = 2
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "#9aa3ad"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#b7c0c9"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#d0d7df"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/silver"
+		from_level = 2
+		to_level = 3
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "white"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "gray"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#dfe6ee"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/lapis"
+		from_level = 2
+		to_level = 3
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "dark_blue"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "blue"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#4169e1"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/gold"
+		from_level = 2
+		to_level = 3
+		range = 24.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "gold"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "yellow"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#ffdd55"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/emerald"
+		from_level = 3
+		to_level = 3
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "dark_green"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "green"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#55ff88"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/diamond"
+		from_level = 3
+		to_level = 3
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "GLOW"
+
+		[[treasure_finder.entries.colors]]
+			color = "#3fffdc"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "aqua"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#3fc5ff"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#8b7dff"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#ff9cf0"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/emerald"
+		from_level = 4
+		to_level = -1
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "X_RAY_OUTLINE"
+
+		[[treasure_finder.entries.colors]]
+			color = "dark_green"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "green"
+			alpha = 0.15
+
+		[[treasure_finder.entries.colors]]
+			color = "#55ff88"
+			alpha = 0.15
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/diamond"
+		from_level = 4
+		to_level = -1
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "X_RAY_OUTLINE"
+
+		[[treasure_finder.entries.colors]]
+			color = "#3fffdc"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "aqua"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#3fc5ff"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#8b7dff"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#ff9cf0"
+			alpha = 1.0
+
+	[[treasure_finder.entries]]
+		resource = "#forge:ores/netherite_scrap"
+		from_level = 4
+		to_level = -1
+		range = 16.0
+		color_shift_rate = 1.0
+		display_type = "X_RAY_OUTLINE"
+
+		[[treasure_finder.entries.colors]]
+			color = "dark_gray"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#3b3b3b"
+			alpha = 1.0
+
+		[[treasure_finder.entries.colors]]
+			color = "#6e4a3a"
+			alpha = 1.0
+
+[voiding]
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+
+[bracewalk]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+
+[tipped]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Base duration (in seconds) for the applied effect
+	#Range: 0.0 ~ 60.0
+	tipped_duration_base = 3.0
+	#How much the enchantment level affect the duration (1 * <multiplier>) (result will be in seconds)
+	#Range: 0.0 ~ 10.0
+	tipped_duration_multiplier = 2.0
+	#Determines if the cooldown should scale with enchantment level (i.e. increasing it)
+	tipped_scale_cooldown_with_level = true
+	#The cooldown (in ticks) before another arrow can apply its effects on the hit entity
+	#Range: 0 ~ 72000
+	tipped_cooldown = 0
+
+[explosive_tip]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Multiplier to the enchantment level which will determine the explosion radius (level * <multiplier>) (result will at least by 0.1)
+	#Range: 0.0 ~ 100.0
+	explosive_tip_radius_multiplier = 1.0
+
+[homing]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 4
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+
+[hunter]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 6
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Determines how much enchantment levels affect the speed of losing stacks - when (tick_count % (level / <reduction>)) is equal to 0 the stacks will reduce by 1
+	#Range: 1 ~ 15
+	hunter_stack_reduction = 3
+
+[wither]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 6
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+	#Chance for the effect to apply (level * <chance_multiplier>) (result of 1 means 100%)
+	#Range: 0.0 ~ 1.0
+	wither_chance_multiplier = 0.1
+	#Base duration (in seconds) for the applied effect
+	#Range: 0.0 ~ 60.0
+	wither_duration_base = 3.0
+	#How much the enchantment level affects the duration (1 * <multiplier>) (result will be in seconds)
+	#Range: 0.0 ~ 10.0
+	wither_duration_multiplier = 2.0
+	#Base damage for the wither effect (the effect level (amplifier) gets added to this damage)
+	#Range: 0.0 ~ 100.0
+	wither_damage_base = 1.0
+	#Multiplier to the (<base_damage> + amplifier) result
+	#Range: 0.0 ~ 10.0
+	wither_damage_multiplier = 0.75
+	#Determines how often the wither effect ticks (i.e. deals damage) - when (duration % (Math.max(1, 20 - amplifier / <damage_tick_rate>))) is equal to 0 the effect tick will happen
+	#Range: 1 ~ 15
+	wither_damage_tick_rate = 2
+
+[confusion]
+	#Maximum acquirable level of the enchantment
+	#Range: 1 ~ 15
+	max_level = 5
+	#Enable or disable the enchantment completely
+	is_enabled = true
+	#Determines if this enchantment can appear in loot / the enchantment table etc.
+	is_discoverable = true
+	#Allow the enchantment to be applied to books
+	is_allowed_on_books = true
+	#Determines if the enchantment appears in trades
+	is_tradeable = true
+	#Treasure enchantments usually do not appear in the enchantment table
+	is_treasure = false
+
